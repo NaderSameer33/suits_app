@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suit/core/ui/app_bar.dart';
 import 'package:suit/core/ui/app_button.dart';
-import 'package:suit/core/ui/app_image.dart';
 import 'package:suit/core/ui/app_input.dart';
 import 'package:suit/core/ui/app_login_or_singup.dart';
 import 'package:suit/core/ui/app_social_button.dart';
@@ -32,13 +31,13 @@ class LoginView extends StatelessWidget {
             ),
             SizedBox(height: 40.h),
             AppInput(
-              prefixIcon: 'passwrod.svg',
+              prefixIcon: 'email.png',
               hintText: 'Enter your email',
 
               bottomSpacing: 16.h,
             ),
             AppInput(
-              prefixIcon: 'passwrod.svg',
+              prefixIcon: 'password.png',
               hintText: 'Enter your password',
               isPadsswrod: true,
             ),

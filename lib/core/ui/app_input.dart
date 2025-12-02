@@ -9,12 +9,12 @@ class AppInput extends StatefulWidget {
     this.suffixIcon,
     this.prefixIcon,
     this.isPadsswrod = false,
-    this.bottomSpacing = 0 
+    this.bottomSpacing = 0,
   });
   final String hintText;
   final String? suffixIcon, prefixIcon;
   final bool isPadsswrod;
-  final double bottomSpacing ; 
+  final double bottomSpacing;
 
   @override
   State<AppInput> createState() => _AppInputState();
@@ -26,7 +26,7 @@ class _AppInputState extends State<AppInput> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom:widget.bottomSpacing),
+      padding: EdgeInsets.only(bottom: widget.bottomSpacing),
       child: TextFormField(
         obscureText: isHidden && widget.isPadsswrod,
         style: TextStyle(
@@ -45,7 +45,7 @@ class _AppInputState extends State<AppInput> {
                     });
                   },
                   icon: AppImage(
-                    image: isHidden ? 'visibility_off.svg' : 'visibility.svg',
+                    image: isHidden ? 'hide.png' : 'visibility.svg',
                   ),
                 )
               : widget.suffixIcon != null
@@ -56,7 +56,6 @@ class _AppInputState extends State<AppInput> {
           prefixIcon: widget.prefixIcon != null
               ? AppImage(
                   image: widget.prefixIcon!,
-                  color: Colors.red,
                 )
               : null,
           hintStyle: TextStyle(

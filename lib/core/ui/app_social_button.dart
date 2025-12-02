@@ -11,10 +11,18 @@ class AppSocialButton extends StatefulWidget {
 
 class _AppSocialButtonState extends State<AppSocialButton> {
   final _list = [
-    _Model(image: 'google.svg', onPressed: () {}, title: 'Sign in with google'),
-    _Model(image: 'apple.svg', onPressed: () {}, title: 'Sign in with Apple'),
     _Model(
-      image: 'facebook.svg',
+      image: 'google.png',
+      onPressed: () {},
+      title: 'Sign in with google',
+    ),
+    _Model(
+      image: 'apple.png',
+      onPressed: () {},
+      title: 'Sign in with Apple',
+    ),
+    _Model(
+      image: 'facebook.png',
       onPressed: () {},
       title: 'Sign in with Facebook',
     ),
