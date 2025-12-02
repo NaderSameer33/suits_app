@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suit/core/logic/helper_method.dart';
-import 'package:suit/views/on_borading/view.dart';
-import 'package:suit/views/splash.dart';
+import 'package:suit/views/auth/views/login.dart';
 
 void main() {
   runApp(SutisApp());
@@ -28,13 +27,39 @@ class SutisApp extends StatelessWidget {
               fixedSize: Size.fromHeight(56),
             ),
           ),
-          scaffoldBackgroundColor: Colors.white,
+          textButtonTheme: TextButtonThemeData(
+            style: TextButton.styleFrom(
+              visualDensity: VisualDensity.compact,
+              alignment: AlignmentDirectional.centerEnd,
+              backgroundColor: Colors.transparent,
+              foregroundColor: Color(0xffDD8560),
+            ),
+          ),
+          inputDecorationTheme: InputDecorationTheme(
+            isDense: true,
+            filled: true,
+            fillColor: Color(0xffF9FAFB),
+            border: _buildBorder(),
+            focusedBorder: _buildBorder(),
+            enabledBorder: _buildBorder(),
+          ),
+          scaffoldBackgroundColor: Color(0xffF4F5F7),
           fontFamily: 'Montserrat',
           colorScheme: ColorScheme.fromSeed(
             seedColor: Color(0xffDD8560),
           ),
         ),
-        home: SplashView(),
+        home: LoginView(),
+      ),
+    );
+  }
+
+  OutlineInputBorder _buildBorder() {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(24),
+      borderSide: BorderSide(
+        color: Color(0xffE5E7EB),
+        width: 1,
       ),
     );
   }
