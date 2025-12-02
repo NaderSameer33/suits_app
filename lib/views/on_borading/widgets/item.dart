@@ -1,4 +1,4 @@
-part of '../view.dart'; 
+part of '../view.dart';
 
 class _Item extends StatelessWidget {
   const _Item({
@@ -41,7 +41,9 @@ class _Item extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () => goTo(
+                          page: WelcomeView(),
+                        ),
 
                         child: Text(
                           'Skip',

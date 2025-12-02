@@ -31,10 +31,10 @@ flutter:
     - assets/svg/
 
   fonts:
-    - family: Inter
+    - family: Montserrat
 
       fonts:
-        - asset: assets/fonts/Inter_18pt-Regular.ttf
+        - asset: assets/fonts/Montserrat-Regular.ttf
 
     - family: Waterfall
       fonts:

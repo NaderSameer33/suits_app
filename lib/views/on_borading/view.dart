@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:suit/core/logic/helper_method.dart';
 import 'package:suit/core/ui/app_image.dart';
 import 'dart:math';
+
+import 'package:suit/views/auth/views/login.dart';
+import 'package:suit/views/welcome.dart';
 part 'widgets/item.dart';
 
 class OnBoradingView extends StatefulWidget {

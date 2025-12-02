@@ -23,7 +23,7 @@ class SutisApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
-          fontFamily: 'Inter',
+          fontFamily: 'Montserrat',
           colorScheme: ColorScheme.fromSeed(
             seedColor: Color(0xffDD8560),
           ),
