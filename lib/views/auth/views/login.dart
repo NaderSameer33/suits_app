@@ -54,7 +54,12 @@ class LoginView extends StatelessWidget {
               ),
             ),
             SizedBox(height: 22.h),
-            AppButton(title: 'Login', onPressed: () {}),
+            AppButton(
+              title: 'Login',
+              onPressed: () {
+               
+              },
+            ),
             SizedBox(height: 10.h),
             AppLoginOrSingup(isLogin: true),
             SizedBox(height: 20.h),

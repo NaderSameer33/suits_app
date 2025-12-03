@@ -38,7 +38,7 @@ class SutisApp extends StatelessWidget {
           inputDecorationTheme: InputDecorationTheme(
             isDense: true,
             filled: true,
-            fillColor: Color(0xffF9FAFB),
+            fillColor: Colors.white,
             border: _buildBorder(),
             focusedBorder: _buildBorder(),
             enabledBorder: _buildBorder(),

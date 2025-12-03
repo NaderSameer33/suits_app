@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suit/core/ui/app_bar.dart';
+import 'package:suit/core/ui/app_button.dart';
 import 'package:suit/core/ui/app_input.dart';
 
 class ForgetPasswordView extends StatelessWidget {
@@ -38,7 +39,14 @@ class ForgetPasswordView extends StatelessWidget {
               SizedBox(
                 height: 31.h,
               ),
-              _Item(),
+              SizedBox(
+                height: 150.h,
+                child: _TapItem(),
+              ),
+              AppButton(
+                title: 'Reset Password',
+                onPressed: () {},
+              ),
             ],
           ),
         ),
@@ -47,77 +55,67 @@ class ForgetPasswordView extends StatelessWidget {
   }
 }
 
-class _Item extends StatefulWidget {
-  const _Item();
+class _TapItem extends StatefulWidget {
+  const _TapItem();
 
   @override
-  State<_Item> createState() => _ItemState();
+  State<_TapItem> createState() => _TapItemState();
 }
 
-class _ItemState extends State<_Item> {
-  bool isEmailActive = false;
-  bool isPhoneActive = false;
+class _TapItemState extends State<_TapItem> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(6),
-      height: 56.h,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(24.r),
-      ),
-      child: Row(
+    return DefaultTabController(
+      animationDuration: Duration(seconds: 1),
+      length: 2,
+      child: Column(
         children: [
-          InkWell(
-            onTap: () {
-              isEmailActive = !isEmailActive;
-              isPhoneActive = false;
-              setState(() {});
-            },
-            child: AnimatedContainer(
-              width: isEmailActive ? 151.w : 120.w,
-              decoration: BoxDecoration(
-                color: isEmailActive ? Color(0xffF9FAFB) : null,
-                borderRadius: BorderRadius.circular(29.r),
+          Container(
+            padding: EdgeInsets.all(6),
+            height: 56.h,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(24.r),
+            ),
+            child: TabBar(
+              indicatorColor: Colors.transparent,
+              labelStyle: TextStyle(
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
+                color: Color(0xffDD8560),
               ),
-              alignment: Alignment.center,
-              duration: Duration(milliseconds: 350),
-              child: Text(
-                'email',
-                style: TextStyle(
-                  color: isEmailActive ? Color(0xffDD8560) : Color(0xffA1A8B0),
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400,
+              dividerHeight: 0,
+
+              unselectedLabelStyle: TextStyle(
+                color: Color(0xffA1A8B0),
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
+              ),
+              tabs: [
+                Tab(
+                  text: 'Email',
                 ),
-              ),
+                Tab(
+                  text: 'Phone',
+                ),
+              ],
             ),
           ),
-          SizedBox(
-            width: 20,
-          ),
-          InkWell(
-            onTap: () {
-              isPhoneActive = !isPhoneActive;
-              isEmailActive = false;
-              setState(() {});
-            },
-            child: AnimatedContainer(
-              width: isPhoneActive ? 151.w : 120.w,
 
-              decoration: BoxDecoration(
-                color: isPhoneActive ? Color(0xffF9FAFB) : null,
-                borderRadius: BorderRadius.circular(29.r),
-              ),
-              alignment: Alignment.center,
-              duration: Duration(milliseconds: 350),
-              child: Text(
-                'phone',
-                style: TextStyle(
-                  color: isPhoneActive ? Color(0xffDD8560) : Color(0xffA1A8B0),
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400,
+          SizedBox(height: 20),
+
+          Expanded(
+            child: TabBarView(
+              children: [
+                AppInput(
+                  hintText: 'Enter your email',
+                  prefixIcon: 'email.png',
                 ),
-              ),
+                AppInput(
+                  hintText: 'Enter your phone',
+                  prefixIcon: 'phone.png',
+                ),
+              ],
             ),
           ),
         ],
