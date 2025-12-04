@@ -4,12 +4,12 @@ import 'package:suit/core/logic/helper_method.dart';
 import 'package:suit/core/ui/app_bar.dart';
 import 'package:suit/core/ui/app_button.dart';
 import 'package:suit/core/ui/app_input.dart';
-import 'package:suit/core/ui/app_login_or_singup.dart';
+import 'package:suit/core/ui/app_signin_or_singup.dart';
 import 'package:suit/core/ui/app_social_button.dart';
-import 'package:suit/views/auth/views/forget_password.dart';
+import 'package:suit/views/auth/forget_password.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,9 +56,7 @@ class LoginView extends StatelessWidget {
             SizedBox(height: 22.h),
             AppButton(
               title: 'Login',
-              onPressed: () {
-               
-              },
+              onPressed: () {},
             ),
             SizedBox(height: 10.h),
             AppLoginOrSingup(isLogin: true),

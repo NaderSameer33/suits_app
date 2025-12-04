@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suit/core/ui/app_bar.dart';
 import 'package:suit/core/ui/app_button.dart';
 import 'package:suit/core/ui/app_input.dart';
-import 'package:suit/core/ui/app_login_or_singup.dart';
+import 'package:suit/core/ui/app_signin_or_singup.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});

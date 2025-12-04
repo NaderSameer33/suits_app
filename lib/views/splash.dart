@@ -15,12 +15,11 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
+    super.initState();
     goTo(
       page: OnBoradingView(),
       delaySeconds: 3,
     );
-
-    super.initState();
   }
 
   @override

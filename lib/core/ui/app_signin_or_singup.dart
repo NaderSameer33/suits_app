@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suit/core/logic/helper_method.dart';
-import 'package:suit/views/auth/views/sign_up.dart';
+import 'package:suit/views/auth/sign_up.dart';
 
 class AppLoginOrSingup extends StatelessWidget {
   const AppLoginOrSingup({super.key, this.isLogin = false});

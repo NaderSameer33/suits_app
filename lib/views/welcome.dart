@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suit/core/logic/helper_method.dart';
 import 'package:suit/core/ui/app_button.dart';
 import 'package:suit/core/ui/app_image.dart';
-import 'package:suit/views/auth/views/login.dart';
+import 'package:suit/views/auth/sign_in.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({super.key});
@@ -69,7 +69,7 @@ class WelcomeView extends StatelessWidget {
               SizedBox(height: 60.h),
               AppButton(
                 title: 'Get started',
-                onPressed: () => goTo(page: LoginView()),
+                onPressed: () => goTo(page: SignInView()),
               ),
             ],
           ),
