@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:suit/core/logic/helper_method.dart';
-import 'package:suit/views/auth/create_passwrod.dart';
-import 'package:suit/views/auth/otp.dart';
+import 'package:suit/views/home/view.dart';
 
 void main() {
   runApp(SutisApp());
@@ -50,9 +49,10 @@ class SutisApp extends StatelessWidget {
             seedColor: Color(0xffDD8560),
           ),
         ),
-        home: CreatePasswrodView(),
+        home: HomeView(),
       ),
     );
+
   }
 
   OutlineInputBorder _buildBorder() {
